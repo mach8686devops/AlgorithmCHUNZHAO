@@ -1,4 +1,8 @@
 from collections import deque
+from collections import Counter
+
+q=deque()
+q.pop()
 
 class Solution(object):
     def groupAnagrams(self, strs):
