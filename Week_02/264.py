@@ -1,4 +1,4 @@
-# 丑数
+# 丑数 剑指49
 
 
 class Solution:
