@@ -25,6 +25,30 @@
 ```
 
 
+如果是找到所有非递增序列的位置的话
+
+可以采用动态规划来处理
+
+```
+    def findLengthOfLCIS(self, nums: List[int]) -> int:
+        n = len(nums)
+        if n <= 0:
+            return 0
+
+        #  新数组用来记录nums连续递增序列长度
+        dp = [1] * n
+        for i in range(1, n):
+            if nums[i] > nums[i - 1]:
+                dp[i] = dp[i - 1] + 1
+        print(dp)
+        # return max(dp)
+        return dp.index(max(dp)) + 1
+```
+
+单无序的地方的话 找最大值的后一位置
+如果多个无序 可以找到除了第二第三多个dp为1的位置索引
+
+
 ```
 class Solution:
     def computePoint(self, points: List[int], target: int) -> int:
@@ -83,4 +107,7 @@ class Solution:
 示例 2：
 输入： points = [51,70,70,81,81,100], target = 60
 输出： 0
+
+
+
 
