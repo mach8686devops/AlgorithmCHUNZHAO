@@ -1,5 +1,6 @@
 # 移动零
 
+
 class Solution(object):
     def moveZeroes(self, n):
         """
