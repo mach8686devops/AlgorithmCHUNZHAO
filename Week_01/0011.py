@@ -1,5 +1,6 @@
 from typing import List
 # 盛最多水的容器
+# 双指针
 
 
 class Solution:

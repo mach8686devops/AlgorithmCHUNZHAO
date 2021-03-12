@@ -13,4 +13,7 @@ class Solution(object):
                 count[ord(c) - ord('a')] += 1
             key = tuple(count)
             ans[key] = ans.get(key, []) + [s]
-        return ans.values()
+        return list(ans.values())
+
+
+print(Solution().groupAnagrams(strs=["eat", "tea", "tan", "ate", "nat", "bat"]))
